@@ -15,6 +15,15 @@ nav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+document.querySelectorAll('.resume-profile, .resume-body, .certifications, .skills-section').forEach((section) => {
+  section.classList.add('reveal', 'resume-reveal');
+});
+
+document.querySelectorAll('.resume-column article, .cert-list article, .skills-grid article').forEach((item, index) => {
+  item.classList.add('reveal', 'resume-item-reveal');
+  item.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
+});
+
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (reducedMotion) {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));

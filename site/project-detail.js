@@ -1,44 +1,63 @@
-const projects = {
-  helkki: {
-    index: '01', title: 'HELKKI', kicker: 'AI HEALTHCARE · FINAL TEAM PROJECT', color: '#f2a23a', soft: '#fff3df',
-    summary: '운동을 시작하지만 컨디션과 생활 제약 때문에 계획을 이어가기 어려운 사용자를 위한 개인 맞춤형 건강관리 서비스입니다.',
-    role: 'PM · 서비스 기획 주도', problem: '운동 계획은 있어도 피로·통증·시간·장소가 달라지면 사용자는 계획을 중단했습니다.',
-    contribution: ['114명 설문 분석과 문제 재정의', '당일 체크인부터 안전 제안·대안 추천·회고까지 핵심 흐름 설계', 'AI 역할·안전 정책과 MVP 우선순위 결정'],
-    solution: ['당일 체크인', '안전 우선 추천', '수행과 회고'], result: '1주 사용자 평가 12명 중 10명이 추천 운동을 1회 이상 수행했고, 사용성 4.17/5와 재사용 의향 4.08/5를 확인했습니다.', highlight: 'SKN 30기 최종 프로젝트 1위'
-  },
-  workshield: {
-    index: '02', title: 'WorkShield', kicker: 'CONTRACT REVIEW · TEAM PROJECT', color: '#2f5cff', soft: '#eaf0ff',
-    summary: 'SW 프리랜서와 하도급 계약자가 검토할 내용을 빠르게 좁힐 수 있도록 계약 조항과 판단 근거를 구조화한 서비스입니다.',
-    role: '서비스 기획 · 데이터 정책', problem: '계약 전문성이 부족한 사용자는 불리하거나 협의가 필요한 문구를 찾기 어렵고 판단 근거를 신뢰하기 어려웠습니다.',
-    contribution: ['표준조항 대비 계약 조항의 상태 비교 구조 설계', '주의 문구와 관련 근거를 함께 표시하는 정보 정책 수립', '분석 결과 기반 Q&A 흐름 기획'],
-    solution: ['조항 단위 구조화', '주의 문구·근거', '결과 기반 Q&A'], result: '계약서 업로드부터 조항 비교, 근거 확인, 후속 질문까지 한 흐름으로 연결했습니다.', highlight: '검토 효율 향상 · 판단 근거 제공'
-  },
-  hotel: {
-    index: '03', title: 'Hotel Cancellation', kicker: 'DATA STRATEGY · TEAM PROJECT', color: '#7067b5', soft: '#efedfb',
-    summary: '예약 취소 가능성을 예측하는 데서 멈추지 않고, 취소 방지와 손실 보전 운영 전략까지 연결한 데이터 서비스 프로젝트입니다.',
-    role: '프로젝트 리드 · 데이터 서비스 기획', problem: '취소 위험을 알아도 후속 조치가 연결되지 않으면 객실 공실과 매출 손실을 줄이기 어렵습니다.',
-    contribution: ['취소 위험 고객군과 운영 담당자 관점 정의', '위험도별 재확인·조건 안내·혜택 제안 정책 설계', '취소 발생 후 재판매·가격·재고 대응 전략 연결'],
-    solution: ['취소 가능성 산출', '취소 방지 대응', '손실 보전 대응'], result: '예측 결과를 현장 담당자가 실행할 수 있는 운영 우선순위와 대응안으로 바꿨습니다.', highlight: '예측 기반 운영 전략'
-  },
-  ev: {
-    index: '04', title: 'EV Seoul', kicker: 'PUBLIC DATA · TEAM PROJECT', color: '#2f63ff', soft: '#eaf1ff',
-    summary: '서울시 전기차 충전소 위치와 차량 현황, FAQ를 한곳에 모아 충전 인프라 탐색 문제를 다룬 첫 데이터 서비스입니다.',
-    role: '데이터 서비스 기획', problem: '사용자는 정보를 확인한 뒤에도 실제 충전 행동까지 이어지기 어려웠고 재방문 이유가 부족했습니다.',
-    contribution: ['충전소 위치·상세 정보와 지역별 차량 현황 통합', '현재 서비스 가치와 탐색 한계 분석', '이용 계정·개인화·재방문 기능으로 다음 버전 제안'],
-    solution: ['충전 이용 계정', '개인화 탐색', '재방문 기능'], result: '정보 제공 중심의 첫 버전을 실제 충전 행동을 지원하는 서비스로 확장할 방향을 도출했습니다.', highlight: '첫 프로젝트 회고에서 다음 버전 제안까지'
-  }
+const helkkiProject = {
+  title: 'HELKKI', kicker: 'PM PROJECTS · SERVICE CASE STUDY', period: '2026.08–09 · 7주', type: 'Competition / Team', color: '#E8875B', soft: '#FFF8E5',
+  summary: '사용자 상태에 따라 운동 계획을 조정하는 개인 맞춤 웰니스 서비스입니다. 운동을 해야 한다는 생각은 있지만 컨디션과 생활 제약 때문에 계획을 이어가기 어려운 사용자를 위해, 상태 확인부터 추천·기록·다음 계획까지 연결했습니다.', role: 'PM 및 서비스 기획 주도', result: 'SKN 30기 최종 프로젝트 1위',
+  sections: [
+    { id: 'overview', label: 'Overview', title: '지금의 나에게 맞는 운동을\n끼끼와 함께 고민합니다.', body: '실제 서비스는 사용자의 오늘 상태를 확인하고, 지금 할 수 있는 운동을 추천합니다. 포트폴리오에서는 서비스 화면 자체보다 문제를 어떤 경험과 정책으로 풀었는지에 초점을 둡니다.', visual: 'hero' },
+    { id: 'problem', label: 'Problem', title: '운동 계획이 무너지는 순간을\n의지의 문제로 보지 않았습니다.', body: '운동 계획이 있어도 피로·수면·통증·시간과 같은 당일 조건이 달라지면 사용자는 계획을 미루거나 포기합니다. 문제를 “운동 의지가 부족하다”가 아니라 “고정된 계획이 상태 변화에 대응하지 못한다”로 정의했습니다.', visual: 'problem' },
+    { id: 'solution', label: 'Solution', title: '상태에 맞춰 추천하고\n기록을 다음 계획으로 연결했습니다.', body: '사용자는 컨디션·피로도·수면·통증을 확인한 뒤 추천 루틴을 받습니다. 운동 후 기록은 다음 루틴에 반영되어, 한 번의 추천이 아니라 지속 가능한 조정 경험으로 이어집니다.', visual: 'feature-checkin' },
+    { id: 'features', label: 'Features', title: '핵심 기능은 두 가지 경험으로\n명확하게 묶었습니다.', body: '첫째, 상태에 따라 달라지는 운동 추천. 둘째, 운동 기록이 다음 계획으로 이어지는 피드백 루프입니다. 실제 구현 기능과 포트폴리오에서 제안하는 확장 기능을 구분해 설명했습니다.', visual: 'feature-calendar', tags: ['상태 체크', '맞춤 루틴 추천', '운동 기록', '다음 루틴 반영'] },
+    { id: 'multi-agent', label: 'AI Agents', title: 'AI를 하나의 답변기가 아니라\n서로 다른 판단의 조합으로 설계했습니다.', body: 'Safety Policy Engine이 먼저 안전 조건을 확인하고, Training·Recovery·Feasibility Agent가 목표·회복·실행 가능성을 나눠 판단합니다. Coordinator가 결과를 조정해 최종 루틴을 구성합니다. 멀티 에이전트 구조는 서비스의 판단 기준을 설명하기 위한 설계이며, 데모나 API 실행 화면은 제공하지 않습니다.', visual: 'multi-agent' },
+    { id: 'gamification', label: 'Gamification', title: '운동을 이어갈수록\n끼끼와 더 가까워져요.', body: '운동으로 모은 바나나를 끼끼에게 주고, 쓰다듬고, 간단한 미니게임을 즐깁니다. 운동 자체를 경쟁으로 만들기보다 완료 후의 작은 재미가 다음 방문으로 이어지도록 설계한 리텐션 아이디어입니다.', visual: 'kikki', tags: ['바나나 보상', '끼끼 상호작용', '미니게임', '재방문 동기'] },
+    { id: 'business', label: 'Expansion', title: 'HELKKI PASS는\n확장 아이디어로 제안했습니다.', body: 'AI 맞춤 루틴 무제한 생성, 프리미엄 운동 콘텐츠, 바나나 코인 추가 지급, 끼끼 아이템, 광고 제거를 묶은 구독 모델입니다. 월간 3,900원·연간 29,000원 가격안은 실제 매출이 아니라 서비스 확장 및 수익 모델 제안입니다.', visual: 'pass', tags: ['제안 기능', '월간·연간 구독', '프리미엄 콘텐츠', '아이템 확장'] },
+    { id: 'design-system', label: 'Design System', title: '웰니스 서비스의 부담을 낮추는\n따뜻한 시각 언어를 만들었습니다.', body: '크림 캔버스 위에 코랄 오렌지와 버터 옐로우를 포인트로 사용하고, 둥근 카드·필·부드러운 그림자로 친근한 진입 경험을 구성했습니다. Pretendard 중심의 읽기 쉬운 타이포그래피와 넉넉한 여백을 적용했습니다.', visual: 'design-system' },
+    { id: 'role', label: 'My Role', title: '문제 정의부터\n서비스 구조와 협업 기준까지 맡았습니다.', body: '사전 설문 114명 분석, 문제 재정의, 핵심 사용자 흐름, MVP 우선순위, AI 안전 정책, 요구사항 및 화면 구조, 팀 의사결정 조율을 주도했습니다. 개발 결과는 팀 성과로, 기획·정책·조정 영역은 제 기여로 구분합니다.', visual: 'role', metrics: [{ value: '114명', label: '사전 설문 분석' }, { value: '7주', label: '프로젝트 운영' }, { value: '12명', label: '사용자 평가' }] },
+    { id: 'retrospective', label: 'Retrospective', title: '초기 가치와\n아직 모르는 것을 함께 기록했습니다.', body: '1주 사용자 평가에서 사용성 4.17/5, 재사용 의향 4.08/5, 추천 운동 수행 10/12를 확인했습니다. 그러나 장기 운동 지속 효과는 검증하지 않았습니다. 다음에는 추천 수락률·완료율·미수행 후 복귀율을 추적하고, 추천 근거를 더 명확히 보여주겠습니다.', visual: 'retrospective' }
+  ]
 };
 
-const p = projects[document.body.dataset.project] || projects.helkki;
-document.documentElement.style.setProperty('--project', p.color);
-document.documentElement.style.setProperty('--project-soft', p.soft);
-document.querySelector('#project-root').innerHTML = `
-  <header class="project-nav"><a href="../index.html">← SEBIN PARK</a><span>${p.index} / 04</span></header>
-  <section class="project-detail-hero section-shell">
-    <div><p class="section-label">${p.kicker}</p><h1>${p.title}</h1><p class="project-lead">${p.summary}</p></div>
-    <dl><div><dt>ROLE</dt><dd>${p.role}</dd></div><div><dt>FOCUS</dt><dd>Problem · Policy · Execution</dd></div></dl>
-  </section>
-  <section class="project-stage"><div class="stage-window"><span>${p.title.toUpperCase()} / SERVICE FLOW</span><div class="stage-flow">${p.solution.map((s,i)=>`<article><b>0${i+1}</b><h3>${s}</h3><p>${i<2?'사용자의 다음 판단을 돕는 핵심 단계':'결과를 다음 행동과 개선으로 연결'}</p></article>`).join('')}</div></div></section>
-  <section class="case-grid section-shell section-pad"><article><p class="section-label">PROBLEM</p><h2>${p.problem}</h2></article><article><p class="section-label">MY CONTRIBUTION</p><ol>${p.contribution.map(x=>`<li>${x}</li>`).join('')}</ol></article></section>
-  <section class="project-result"><div class="section-shell"><p class="section-label">RESULT & LEARNING</p><div><h2>${p.result}</h2><strong>${p.highlight}</strong></div></div></section>
-  <nav class="detail-footer section-shell"><a href="../index.html#projects">← 전체 프로젝트</a><a href="../lab.html">개인 작업 보기 ↗</a></nav>`;
+const fallbackProjects = {
+  workshield: { title: 'WorkShield', kicker: 'PM PROJECTS · SERVICE DESIGN', period: '2026.07 · 3·4차 연계 프로젝트', type: 'Team', color: '#2f5cff', soft: '#eaf0ff', summary: '표준계약서와의 조항 비교를 통해 계약 검토를 보조하는 서비스입니다.', role: 'PM 및 서비스 기획 주도', result: 'MCP 기반 검토 기능을 웹서비스로 확장', sections: [{ id: 'overview', label: 'Overview', title: '계약 검토에서\n확인할 문장을 좁혔습니다.', body: 'SW 프리랜서가 계약 조항과 판단 근거를 빠르게 파악하도록 돕는 검토 보조 서비스입니다.', visual: 'contract' }, { id: 'problem', label: 'Problem', title: '불리한 문구와\n판단 근거를 찾기 어려웠습니다.', body: '프리랜서 전반에서 IT·SW 프리랜서로 타깃을 좁혀 문제를 구체화했습니다.', visual: 'decision' }, { id: 'mvp', label: 'MVP', title: '업로드부터 결과 확인까지\n하나의 흐름으로 묶었습니다.', body: '조항 분리·표준조항 비교·결과 확인·Q&A를 MVP로 정의했습니다.', visual: 'priority' }, { id: 'requirements', label: 'Requirements', title: '입력·출력·예외를\n요구사항으로 고정했습니다.', body: '상태·주의 문구·판단 근거를 함께 보여주는 정책을 설계했습니다.', visual: 'requirements' }, { id: 'artifacts', label: 'Artifacts', title: '정책과 화면의 연결을\n산출물로 남겼습니다.', body: 'MVP 문서·요구사항·비교 정책·화면설계서를 연결합니다.', artifacts: ['MVP 기획 문서', '요구사항 정의서', '조항 비교 정책'] }] },
+  hotel: { title: 'Hotel Cancellation', kicker: 'DATA ANALYSIS · OPERATIONS STRATEGY', period: '2026.05.18–05.23', type: 'Team', color: '#7067b5', soft: '#efedfb', summary: '호텔 예약 취소 위험을 예측하고 운영 활용 전략으로 연결한 데이터 프로젝트입니다.', role: 'PM 및 데이터 서비스 기획', result: '팀 모델 F1 0.831 · Recall 0.803', sections: [{ id: 'overview', label: 'Overview', title: '예측 결과를\n운영자의 다음 행동으로 연결했습니다.', body: '위험 고객을 선별하고 운영 담당자의 확인·대응 흐름까지 제안했습니다.', visual: 'hotel-metrics' }, { id: 'data', label: 'Data', title: '테이블을 이해해야\n분석 질문을 세울 수 있었습니다.', body: '예약·고객·객실 데이터를 구조화하고 ERD와 SQL 설계를 정리했습니다.', visual: 'erd' }, { id: 'eda', label: 'EDA', title: '그래프를\n운영 질문으로 바꿨습니다.', body: '분석 목적·변수·결과·해석·운영 활용의 순서로 인사이트를 정리했습니다.', visual: 'chart' }, { id: 'strategy', label: 'Strategy', title: '예측 → 확인 → 대응의\n운영 시나리오를 만들었습니다.', body: '실제 운영 성과가 아닌 제안 단계임을 명시하고 후속 지표를 남겼습니다.', visual: 'hotel-flow' }] }
+};
+
+const visualTemplates = {
+  hero: '<div class="helkki-hero-visual"><div class="helkki-phone"><span>오늘의 체크인</span><b>맞춤 추천 완료</b><i>15분 가벼운 코어</i><i>목·어깨 릴렉스</i></div><img src="../assets/kikki-hi.png" alt="끼끼 캐릭터"></div>',
+  problem: '<div class="problem-visual"><span>계획</span><b>≠</b><span>오늘의 상태</span><small>피로 · 수면 · 통증 · 시간</small></div>',
+  'feature-checkin': '<div class="checkin-visual"><span>컨디션 양호</span><span>피로도 보통</span><span>수면 7시간</span><span>통증 없음</span><b>↓</b><strong>전신 스트레칭 & 가벼운 코어 15분</strong></div>',
+  'feature-calendar': '<div class="calendar-visual"><div><i>월</i><i>화</i><i>수</i><i>목</i><i>금</i><i>토</i><i>일</i></div><div><b>✓</b><b>×</b><b>△</b><b>―</b><b>✓</b><b>―</b><b>×</b></div><strong>운동 기록 → 다음 루틴에 반영</strong></div>',
+  'multi-agent': '<div class="agents-visual"><span class="agent-safety">Safety Policy Engine</span><b>→</b><div><i>Training</i><i>Recovery</i><i>Feasibility</i></div><b>→</b><span class="agent-coordinator">Coordinator</span></div>',
+  kikki: '<div class="kikki-source-layout"><div class="kikki-home-card"><div><span>HELKKI · RETENTION IDEA</span><b>끼끼의 집</b><small>운동으로 모은 바나나로 끼끼와 다양한 상호작용을 즐겨요.</small></div><img src="../assets/kikki-hi.png" alt="헬끼 마스코트 끼끼"></div><div class="kikki-action-grid"><article><strong>바나나 주기</strong><span>운동으로 모은 바나나를 끼끼에게 줄 수 있어요.</span></article><article><strong>쓰다듬기</strong><span>끼끼를 쓰다듬으며 간단한 상호작용을 즐겨요.</span></article><article><strong>바나나 받기</strong><span>떨어지는 바나나를 잡는 미니게임을 즐겨요.</span></article></div></div>',
+  pass: '<div class="pass-visual"><div><b>HELKKI PASS</b><span>AI 맞춤 루틴 · 프리미엄 콘텐츠 · 아이템</span></div><img src="../assets/kikki-pass.png" alt="HELKKI PASS 카드와 끼끼"></div>',
+  'design-system': '<div class="design-visual"><div><i></i><i></i><i></i><i></i></div><strong>#FFF8E5 · #E8875B · #F4B942 · #5A4636</strong></div>',
+  role: '<div class="role-visual"><span>Research</span><b>→</b><span>Policy</span><b>→</b><span>PM</span><b>→</b><span>Validation</span></div>',
+  retrospective: '<div class="retro-visual"><strong>4.17/5</strong><span>사용성</span><strong>10/12</strong><span>추천 운동 수행</span><small>다음 검증 · 수락률 · 완료율 · 복귀율</small></div>',
+  contract: '<div class="contract-board"><div class="contract-lines"><i></i><i></i><i></i><i></i></div><aside><b>주의 필요</b><span>근거 확인 ↗</span></aside></div>', priority: '<div class="priority-board"><span class="priority-main">핵심 경험<br><strong>업로드 · 비교 · 확인</strong></span><span>후순위<br>자동 협상</span></div>', decision: '<div class="decision-board"><small>판단 기준</small><strong>사용자 근거 + 정책 + 구현 가능성</strong></div>', requirements: '<div class="requirements-board"><span>입력</span><span>시스템</span><span>출력</span><div><i></i><i></i><i></i></div></div>', 'hotel-metrics': '<div class="metric-board"><strong>0.831</strong><span>F1 score</span><div><i></i><i></i><i></i><i></i></div></div>', erd: '<div class="erd-board"><span>RESERVATION</span><b>1 ─ N</b><span>CUSTOMER</span><b>1 ─ N</b><span>ROOM</span></div>', chart: '<div class="chart-board"><i></i><i></i><i></i><i></i><i></i></div>', 'hotel-flow': '<div class="visual-flow"><i>예약 발생</i><b>→</b><i>위험 예측</i><b>→</b><i>운영 대응</i></div>'
+};
+
+function renderSection(section, index) {
+  const visual = section.visual ? `<div class="detail-visual">${visualTemplates[section.visual] || ''}</div>` : '';
+  const metrics = section.metrics ? `<div class="detail-metrics">${section.metrics.map(item => `<article><strong>${item.value}</strong><span>${item.label}</span></article>`).join('')}</div>` : '';
+  const tags = section.tags ? `<div class="detail-tags">${section.tags.map(tag => `<span>${tag}</span>`).join('')}</div>` : '';
+  const artifacts = section.artifacts ? `<div class="artifact-grid">${section.artifacts.map((item, i) => `<button class="artifact-card" type="button" data-artifact="${item}"><span>0${i + 1}</span><strong>${item}</strong><em>미리보기 ↗</em></button>`).join('')}</div>` : '';
+  return `<section id="${section.id}" class="detail-section section-shell reveal" data-section="${section.id}"><div class="detail-section-head"><span class="detail-index">0${index + 1}</span><p class="section-label">${section.label}</p></div><div class="detail-section-body"><div><h2>${section.title.replace(/\n/g, '<br>')}</h2><p>${section.body}</p>${tags}</div>${visual}${metrics}${artifacts}</div></section>`;
+}
+
+const projectKey = document.body.dataset.project;
+const project = projectKey === 'helkki' ? helkkiProject : fallbackProjects[projectKey] || helkkiProject;
+document.body.classList.add('site-scale', 'project-page');
+if (projectKey === 'helkki') document.body.classList.add('helkki-case');
+document.documentElement.style.setProperty('--project', project.color);
+document.documentElement.style.setProperty('--project-soft', project.soft);
+document.querySelector('#project-root').innerHTML = `<header class="site-header" data-header><a class="brand" href="../index.html" aria-label="SEBIN PARK 홈"><svg class="brand-mark" viewBox="0 0 220 92" aria-hidden="true"><path pathLength="1" d="M6 54C29 13 66 5 91 28C111 47 101 74 78 76C52 78 34 56 43 35C54 11 91 15 105 37C120 61 108 88 88 84C66 80 73 53 95 40C123 23 151 29 171 51C190 72 204 68 215 49"/></svg><span>SEBIN PARK</span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button><nav id="site-nav" class="site-nav" aria-label="주요 메뉴"><a href="../about.html">ABOUT</a><a class="is-active" href="../projects.html">PM PROJECTS</a><a href="../lab.html">VIBE CODING</a></nav></header><main><section class="project-detail-hero section-shell"><div><p class="section-label">${project.kicker}</p><h1>${project.title}</h1><p class="project-lead">${project.summary}</p><div class="hero-tags"><span>${project.period}</span><span>${project.type}</span><span>${project.role}</span></div></div><aside class="project-meta"><div><span>ROLE</span><strong>${project.role}</strong></div><div><span>OUTCOME</span><strong>${project.result}</strong></div></aside></section><nav class="case-toc" aria-label="프로젝트 목차"><div class="case-toc-inner">${project.sections.map(section => `<a href="#${section.id}" data-toc="${section.id}">${section.label}</a>`).join('')}</div></nav><div class="detail-content">${project.sections.map(renderSection).join('')}</div>${projectKey === 'helkki' ? '<section class="project-boundary section-shell"><span>PORTFOLIO SCOPE</span><strong>실제 구현 기능</strong><p>상태 체크 · 맞춤 루틴 추천 · 운동 기록 반영 · 안전 기준 기반 추천</p><strong>기획·확장 제안</strong><p>끼끼 리텐션 구조 · HELKKI PASS · 구독 수익 모델 · 프리미엄 콘텐츠</p></section>' : ''}<section class="project-result"><div class="section-shell"><p class="section-label">PROJECT TAKEAWAY</p><h2>${project.result}</h2><p>실제 구현 기능과 확장 아이디어를 구분해 프로젝트의 판단 근거와 다음 과제를 기록했습니다.</p></div></section></main><nav class="detail-footer section-shell"><a href="../projects.html">← 전체 프로젝트</a><a href="../index.html">HOME ↗</a></nav><dialog class="artifact-modal" data-artifact-modal><button type="button" class="modal-close" data-modal-close aria-label="닫기">×</button><p class="section-label">ARTIFACT PREVIEW</p><h2 data-modal-title></h2><div class="modal-sheet"><span>원본 산출물 연결 영역</span><i></i><i></i><i></i></div><p>서비스 데모가 아닌 포트폴리오용 산출물 미리보기입니다.</p></dialog>`;
+
+const tocLinks = [...document.querySelectorAll('[data-toc]')];
+const detailSections = [...document.querySelectorAll('[data-section]')];
+tocLinks.forEach(link => link.addEventListener('click', event => { event.preventDefault(); document.getElementById(link.dataset.toc)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.replaceState(null, '', `#${link.dataset.toc}`); }));
+const activateToc = id => tocLinks.forEach(link => link.classList.toggle('is-active', link.dataset.toc === id));
+const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) activateToc(entry.target.dataset.section); }), { rootMargin: '-22% 0px -62% 0px', threshold: 0 });
+detailSections.forEach(section => sectionObserver.observe(section));
+document.querySelectorAll('[data-artifact]').forEach(card => card.addEventListener('click', () => { const modal = document.querySelector('[data-artifact-modal]'); modal.querySelector('[data-modal-title]').textContent = card.dataset.artifact; modal.showModal(); }));
+document.querySelector('[data-modal-close]')?.addEventListener('click', () => document.querySelector('[data-artifact-modal]').close());
+document.querySelector('[data-artifact-modal]')?.addEventListener('click', event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
+if (window.location.hash) requestAnimationFrame(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView());
+document.querySelector('.brand span')?.replaceChildren('SEBIN PARK PORTFOLIO');

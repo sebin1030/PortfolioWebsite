@@ -2,6 +2,12 @@ const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.site-nav');
 
+document.querySelectorAll('.site-nav a').forEach((link) => {
+  if (link.textContent.trim() === 'TEAM PROJECTS') {
+    link.href = window.location.pathname.includes('/projects/') ? '../projects.html' : './projects.html';
+  }
+});
+
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!open));

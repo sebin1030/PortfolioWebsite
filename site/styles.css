@@ -29,7 +29,7 @@ button { font: inherit; }
 .brand { display: flex; align-items: center; gap: 12px; font: 600 13px/1 "Noto Sans KR", sans-serif; letter-spacing: .09em; }
 .brand-mark { width: 42px; height: 20px; overflow: visible; }
 .brand-mark path, .hero-symbol path { fill: none; stroke: var(--motion); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
-.site-nav { display: flex; gap: 34px; font-size: 11px; letter-spacing: .08em; }
+.site-nav { display: flex; gap: 34px; font-size: 16px; letter-spacing: .03em; }
 .site-nav a { position: relative; padding-block: 8px; }
 .site-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 2px; height: 1px; background: var(--motion); transition: right .3s ease; }
 .site-nav a:hover::after { right: 0; }
@@ -352,5 +352,50 @@ button { font: inherit; }
 .about-page .skills-section { order: 3; }
 .about-page .certifications { order: 4; }
 .projects-page .page-hero h1 { font-size: clamp(34px, 4.55vw, 63px); }
+.portfolio-actions { justify-content: center; flex-wrap: wrap; gap: 30px; }
+.portfolio-actions { margin-top: 64px; }
+.portfolio-actions .button { min-height: 56px; padding-inline: 26px; background: #fff; color: var(--ink); border-color: var(--ink); cursor: pointer; font-size: 19px; }
+.portfolio-actions .button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 .resume-intro h2 span { white-space: nowrap; }
 @media (max-width: 700px) { .resume-intro h2 span { white-space: normal; } }
+.projects-page .selected-projects { padding-top: 46px; }
+.projects-page .selected-projects-grid { grid-template-columns: 1fr; gap: 16px; }
+.projects-page .selected-card,
+.projects-page .selected-featured,
+.projects-page .selected-secondary { height: 330px; min-height: 330px; flex-direction: row; border-radius: 18px; }
+.projects-page .selected-copy,
+.projects-page .selected-featured .selected-copy,
+.projects-page .selected-secondary .selected-copy { flex: 1 1 62%; padding: 28px 34px; }
+.projects-page .selected-kicker { margin-bottom: 16px; font-size: 16px; }
+.projects-page .selected-copy h3,
+.projects-page .selected-secondary .selected-copy h3 { margin-bottom: 12px; font-size: clamp(33px, 3vw, 45px); }
+.projects-page .selected-summary,
+.projects-page .selected-secondary .selected-summary { font-size: 19px; }
+.projects-page .selected-meta,
+.projects-page .selected-secondary .selected-meta { margin-top: 14px; font-size: 16px; }
+.projects-page .selected-visual,
+.projects-page .selected-featured .selected-visual,
+.projects-page .selected-workshield,
+.projects-page .selected-hotel { flex: 0 0 38%; min-height: 330px; }
+@media (max-width: 700px) {
+  .projects-page .selected-card,
+  .projects-page .selected-featured,
+  .projects-page .selected-secondary { height: auto; min-height: 0; flex-direction: column; }
+  .projects-page .selected-copy,
+  .projects-page .selected-featured .selected-copy,
+  .projects-page .selected-secondary .selected-copy { flex: none; }
+  .projects-page .selected-visual,
+  .projects-page .selected-featured .selected-visual,
+  .projects-page .selected-workshield,
+  .projects-page .selected-hotel { flex: none; min-height: 190px; height: 190px; }
+}
+body[data-project] .site-nav { font-size: 16px; }
+.projects-page .page-hero { min-height: 430px; }
+.projects-page .selected-projects { padding-top: 24px; }
+.projects-page .selected-bookmark { display: none; }
+.projects-page .selected-helkki,
+.projects-page .selected-workshield,
+.projects-page .selected-hotel { background: transparent; }
+.projects-page .selected-helkki img,
+.projects-page .selected-workshield img,
+.projects-page .selected-hotel img { display: block; width: auto !important; height: auto !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain; object-position: center; background: transparent; }

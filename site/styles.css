@@ -143,7 +143,7 @@ button { font: inherit; }
 .resume-profile { display:grid; grid-template-columns:.75fr 1.25fr; gap:clamp(40px,6vw,86px); padding-top:80px; align-items:center; }
 .about-photo { height:520px; margin:0; overflow:hidden; background:var(--paper); }.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 14%;filter:saturate(.8)}
 .resume-profile .section-label,.resume-body .section-label,.certifications .section-label,.skills-section .section-label{font-size:22px;line-height:1.4;letter-spacing:-.02em}
-.resume-intro h2 { margin:24px 0 20px;font-size:clamp(23px,2.56vw,37px);line-height:1.3;letter-spacing:-.04em}.resume-intro>p:not(.section-label){color:var(--muted);font-size:16px;line-height:1.8;word-break:keep-all}.resume-intro dl{margin-top:36px;border-top:1px solid var(--line)}.resume-intro dl div{display:grid;grid-template-columns:100px 1fr;padding:15px 0;border-bottom:1px solid var(--line)}.resume-intro dt{font-size:15px;color:var(--motion);font-weight:700;letter-spacing:.02em}.resume-intro dd{margin:0;font-size:14px}
+.resume-intro h2 { margin:24px 0 20px;font-size:calc(clamp(23px,2.56vw,37px) + 2pt);line-height:1.3;letter-spacing:-.04em}.resume-intro>p:not(.section-label){color:var(--muted);font-size:16px;line-height:1.8;word-break:keep-all}.resume-intro dl{margin-top:36px;border-top:1px solid var(--line)}.resume-intro dl div{display:grid;grid-template-columns:100px 1fr;padding:15px 0;border-bottom:1px solid var(--line)}.resume-intro dt{font-size:15px;color:var(--motion);font-weight:700;letter-spacing:.02em}.resume-intro dd{margin:0;font-size:14px}
 .resume-body { display:grid;grid-template-columns:1fr 1fr;gap:100px}.resume-column article{display:grid;grid-template-columns:165px 1fr;padding:26px 0;border-bottom:1px solid var(--line)}.resume-column .section-label{margin-bottom:25px}.resume-column time{color:var(--muted);font-size:14px;line-height:1.7}.resume-column h3{margin:0;font-size:20px;line-height:1.45}.resume-column article p{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.65}.career-details{border-top:1px solid var(--line)}.career-list{margin-top:42px;border-top:1px solid var(--line)}.career-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:70px;padding:34px 0;border-bottom:1px solid var(--line)}.career-list time{color:var(--muted);font-size:11px}.career-list h3{margin:12px 0 0;font-size:18px}.career-list ul{margin:0;padding-left:20px}.career-list li{margin:0 0 11px;color:var(--muted);font-size:14px;line-height:1.7;word-break:keep-all}.skills-section{padding:120px 0;background:var(--paper)}.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-top:42px}.skills-grid article{min-height:250px}.skills-grid h3{margin:0;padding:0 0 22px;border-bottom:1px solid var(--line);font-size:20px;line-height:1.45}.skills-grid ul{padding:0;margin:0;list-style:none}.skills-grid li{padding:19px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.65}.lab-card span{color:var(--motion);font-size:10px;font-weight:700;letter-spacing:.08em}
 .cert-list{display:grid;grid-template-columns:1fr;margin-top:42px;border-top:1px solid var(--line)}.cert-list article{display:grid;grid-template-columns:1fr 130px;align-items:center;gap:24px;min-height:102px;padding:22px 0;border-bottom:1px solid var(--line)}.cert-list article:nth-child(odd){border-right:0}.cert-list article:nth-child(even){padding-left:0}.cert-list article>div{display:grid;grid-template-columns:minmax(260px,1fr) minmax(220px,1fr);align-items:center;gap:24px}.cert-list h3{margin:0;font-size:20px;line-height:1.45}.cert-list p{margin:0;color:var(--muted);font-size:15px;line-height:1.65}.cert-list time{justify-self:end;color:var(--muted);font-size:13px}
 .lab-grid { display:grid;grid-template-columns:1fr 1fr;gap:24px}.lab-card{min-height:390px;display:grid;grid-template-columns:60px 1fr;padding:38px;border:1px solid var(--line);border-radius:22px}.lab-featured{grid-column:1/-1;min-height:470px;background:var(--paper)}.lab-number{font:500 28px/1 "Cormorant Garamond",serif;color:var(--motion)}.lab-card h2{margin:55px 0 18px;font:500 clamp(38px,5vw,70px)/1 "Cormorant Garamond",serif}.lab-card p{max-width:680px;color:var(--muted);font-size:15px;line-height:1.85}.lab-card ul{display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:45px 0 0;list-style:none}.lab-card li{padding:8px 12px;border:1px solid var(--line);border-radius:99px;font-size:11px}.lab-empty{opacity:.72}
@@ -399,3 +399,176 @@ body[data-project] .site-nav { font-size: 16px; }
 .projects-page .selected-helkki img,
 .projects-page .selected-workshield img,
 .projects-page .selected-hotel img { display: block; width: auto !important; height: auto !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain; object-position: center; background: transparent; }
+
+/* Profile resource links */
+.resume-intro .profile-resource { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.resume-intro .profile-resource:hover, .resume-intro .profile-resource:focus-visible { text-decoration-color: currentColor; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.profile-downloads { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.profile-downloads a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 22px; border: 1px solid #262626; border-radius: 999px; background: #fff; color: #262626; font-size: calc(14px + 2pt); font-weight: 700; transition: background-color .2s, color .2s; }
+.profile-downloads a:hover, .profile-downloads a:focus-visible { background: #262626; color: #fff; }
+
+/* Enlarge profile details and download labels by 2pt. */
+.resume-intro > p:not(.section-label) { font-size: calc(16px + 2pt); }
+.resume-intro dt { font-size: calc(15px + 2pt); }
+.resume-intro dd { font-size: calc(14px + 2pt); }
+
+/* About: education, career, certifications, skills and footer. */
+.resume-body .section-label, .certifications .section-label, .skills-section .section-label { font-size: calc(22px + 2pt); }
+.resume-column time { font-size: calc(14px + 2pt); }
+.resume-column h3, .cert-list h3, .skills-grid h3 { font-size: calc(20px + 2pt); }
+.resume-column article p, .cert-list p { font-size: calc(15px + 2pt); }
+.cert-list time { font-size: calc(13px + 2pt); }
+.skills-grid li { font-size: calc(17px + 2pt); }
+.about-page .site-footer { font-size: calc(11px + 2pt); }
+@media (max-width: 560px) {
+  .cert-list h3 { font-size: calc(18px + 2pt); }
+  .cert-list p { font-size: calc(14px + 2pt); }
+}
+
+.page-hero > .team-projects-intro { font-size: calc(17px + 2pt); }
+
+/* Match footer text size to the About page. */
+.projects-page .site-footer, .lab-page .site-footer, .project-page .detail-footer { font-size: calc(11px + 2pt); }
+@media (max-width: 900px) { .project-page .detail-footer { font-size: calc((11px + 2pt) * .8); } }
+
+/* Evidence-led project case studies */
+.evidence-case { --project: #6667a8; --project-soft: #f6f6fa; }
+.case-hero { padding-top: 120px; padding-bottom: 100px; }
+.case-hero h1 { max-width: 1100px; margin: 30px 0; font-size: clamp(46px, 7vw, 100px); line-height: 1.08; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.case-hero > p:last-child { max-width: 850px; color: var(--muted); font-size: 20px; line-height: 1.8; word-break: keep-all; }
+.evidence-case .case-toc { background: #fff; }
+.evidence-section { display: grid; grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr); gap: 60px; padding-top: 92px; padding-bottom: 92px; border-bottom: 1px solid var(--line); scroll-margin-top: 130px; }
+.evidence-heading > span { color: var(--motion); font-size: 13px; }
+.evidence-heading .section-label { margin-top: 12px; }
+.evidence-content { min-width: 0; }
+.evidence-content h2 { margin: 0 0 26px; font-size: clamp(28px, 3vw, 40px); line-height: 1.35; letter-spacing: -.04em; word-break: keep-all; }
+.evidence-content h3 { margin: 0 0 14px; font-size: 20px; line-height: 1.5; overflow-wrap: anywhere; }
+.evidence-content p { color: var(--muted); font-size: 16px; line-height: 1.85; word-break: keep-all; }
+.case-overview { border-top: 1px solid var(--line); }
+.case-overview p { display: grid; grid-template-columns: 120px 1fr; gap: 20px; margin: 0; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.case-overview b { color: var(--motion); }
+.case-link { display: inline-block; color: var(--motion); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.case-overview .case-link { margin-right: 16px; }
+.case-kpis, .case-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 32px 0; }
+.case-kpis article, .case-columns article { padding: 28px; background: #f7f7f9; border-radius: 12px; }
+.case-kpis strong { display: block; color: var(--motion); font-size: clamp(32px, 4vw, 48px); line-height: 1.2; }
+.case-kpis span, .case-kpis small { display: block; margin-top: 12px; line-height: 1.6; }
+.case-kpis small { color: var(--muted); }
+.case-columns article p { margin-bottom: 18px; }
+.case-tag { display: inline-block; margin-bottom: 18px; color: var(--motion); font-weight: 700; }
+.case-bars { display: grid; gap: 18px; margin: 30px 0; }
+.case-bar { display: grid; grid-template-columns: 170px minmax(0, 1fr) 100px; align-items: center; gap: 16px; font-size: 15px; }
+.case-bar strong { white-space: nowrap; text-align: right; }
+.case-bar strong small { color: var(--muted); font-weight: 400; }
+.case-track { height: 14px; border-radius: 10px; background: #eeeef2; overflow: hidden; }
+.case-track i { display: block; height: 100%; background: var(--motion); border-radius: inherit; }
+.evidence-content .case-source { margin: 22px 0; color: #77777f; font-size: 13px; line-height: 1.7; }
+.case-notes { margin-top: 28px; padding: 18px 24px; border-left: 3px solid var(--motion); background: #f7f7f9; }
+.case-notes p { margin: 6px 0; }
+.case-notes b { display: inline-block; min-width: 80px; color: var(--motion); }
+.case-flow { display: flex; flex-wrap: wrap; gap: 12px; margin: 35px 0; }
+.case-flow span { padding: 12px 18px; border: 1px solid var(--line); border-radius: 24px; font-size: 14px; }
+.case-flow span:not(:last-child)::after { content: ' →'; color: var(--motion); }
+.case-screens { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 32px 0; }
+.case-screens figure, .case-document-preview { margin: 0; }
+.case-screens img { display: block; width: 100%; height: 390px; object-fit: contain; object-position: top; background: #f7f7f9; border-radius: 12px; }
+.case-screens figcaption, .case-document-preview figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; }
+.case-document-preview img { display: block; max-width: 100%; max-height: 500px; margin: 30px auto 0; object-fit: contain; }
+.hotel-chart { display: flex; align-items: end; justify-content: space-around; gap: 20px; min-height: 250px; padding: 25px 15px 0; border-bottom: 1px solid var(--line); }
+.hotel-chart div { display: flex; width: 28%; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.hotel-chart i { display: block; width: min(100%, 85px); background: var(--motion); border-radius: 6px 6px 0 0; }
+.hotel-chart span { min-height: 42px; font-size: 14px; }
+.evidence-content .case-emphasis { color: var(--motion); font-weight: 700; }
+.case-artifacts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 30px; }
+.case-artifact { padding: 24px; border: 1px solid var(--line); border-radius: 12px; }
+.case-artifact img { display: block; width: 100%; max-height: 170px; object-fit: contain; margin-bottom: 20px; background: #f7f7f9; }
+.case-artifact p { font-size: 14px; }
+@media (max-width: 700px) {
+ .case-hero { padding-top: 65px; padding-bottom: 65px; }
+ .case-hero > p:last-child { font-size: 17px; }
+ .evidence-section { grid-template-columns: 1fr; gap: 24px; padding-top: 60px; padding-bottom: 60px; }
+ .case-kpis, .case-columns, .case-artifacts { grid-template-columns: 1fr; }
+ .case-overview p { grid-template-columns: 1fr; gap: 3px; }
+ .case-bar { grid-template-columns: minmax(0, 1fr) auto; gap: 7px 12px; }
+ .case-bar .case-track { grid-column: 1 / -1; grid-row: 2; }
+ .case-screens { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+ .case-screens img { height: auto; }
+ .hotel-chart { gap: 8px; }
+}
+
+/* Project introduction and section navigation */
+.evidence-case .case-hero > p:last-child { font-size: calc(20px + 2pt); }
+.evidence-case .case-toc a,
+.evidence-case .evidence-heading .section-label { font-size: calc(11px + 5pt); }
+.evidence-case .evidence-heading > span { font-size: calc(13px + 5pt); }
+@media (max-width: 700px) {
+  .evidence-case .case-hero > p:last-child { font-size: calc(17px + 2pt); }
+}
+
+@media (min-width: 901px) {
+  body[data-project="helkki"] .case-hero > p:last-child { max-width: none; white-space: nowrap; }
+}
+
+/* HELKKI's coral accent, while preserving the white case-study layout. */
+body.evidence-case[data-project="helkki"] { --motion: #e8875b; --project: #e8875b; --project-soft: #fff8e5; }
+
+/* Project brand colors */
+body.evidence-case[data-project="helkki"] { --motion: #F7BA50; --project: #F7BA50; }
+body.evidence-case[data-project="workshield"] { --motion: #2C5BFF; --project: #2C5BFF; }
+body.evidence-case[data-project="hotel"] { --motion: #6C66B2; --project: #6C66B2; }
+
+/* Present the HELKKI user journey as a diagram, not controls. */
+.evidence-case .case-flow-title { margin: 32px 0 0; }
+.evidence-case .case-flow span { padding: 4px 0; border: 0; border-radius: 0; }
+.evidence-case .case-flow span:not(:last-child)::after { content: ' →'; margin-left: 12px; }
+
+.case-video-title { margin-top: 36px !important; }
+.case-video { display: block; width: 100%; max-width: 900px; height: auto; aspect-ratio: 16 / 9; background: #111; border-radius: 12px; }
+
+@media (min-width: 901px) {
+  body[data-project="hotel"] .case-hero h1 { max-width: none; white-space: nowrap; }
+  body[data-project="hotel"] .case-hero > p:last-child { max-width: none; white-space: nowrap; font-size: clamp(15px, 1.55vw, 22.667px); }
+}
+
+@media (min-width: 901px) {
+  body[data-project="workshield"] .case-hero > p:last-child { max-width: none; white-space: nowrap; font-size: clamp(15px, 1.55vw, 22.667px); }
+}
+
+/* Project overview details */
+.evidence-case .case-overview p { font-size: calc(16px + 2pt); }
+.evidence-case #overview .case-source { font-size: calc(13px + 2pt); }
+
+/* Project section content: increase each existing size by 2pt. */
+.evidence-case .evidence-content p { font-size: calc(16px + 2pt); }
+.evidence-case .evidence-content h3 { font-size: calc(20px + 2pt); }
+.evidence-case .evidence-content .case-source { font-size: calc(13px + 2pt); }
+.evidence-case .case-artifact p { font-size: calc(14px + 2pt); }
+.evidence-case .case-bar { font-size: calc(15px + 2pt); }
+.evidence-case .case-flow span, .evidence-case .hotel-chart span { font-size: calc(14px + 2pt); }
+.evidence-case .case-screens figcaption, .evidence-case .case-document-preview figcaption { font-size: calc(13px + 2pt); }
+
+@media (min-width: 901px) {
+  .evidence-case .helkki-demo-caption { white-space: nowrap; font-size: clamp(12px, 1.1vw, calc(16px + 2pt)); }
+}
+
+@media (min-width: 901px) {
+  .evidence-case .deliverables-note { white-space: nowrap; font-size: clamp(12px, 1vw, calc(16px + 2pt)); }
+}
+
+@media (min-width: 901px) {
+  body[data-project="workshield"] .case-flow { flex-wrap: nowrap; gap: clamp(4px, .65vw, 12px); }
+  body[data-project="workshield"] .case-flow span { white-space: nowrap; font-size: calc(14px + 2pt); }
+  body[data-project="workshield"] .case-flow span:not(:last-child)::after { margin-left: clamp(4px, .5vw, 12px); }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  body[data-project="workshield"] .case-flow { flex-wrap: wrap; }
+}
+
+.hotel-lead-chart { margin: 36px 0; padding: 30px; border: 1px solid var(--line); border-radius: 12px; }
+.hotel-lead-chart > p { margin: 0; }
+.hotel-lead-chart .case-bars { margin-bottom: 20px; }
+.evidence-case .hotel-lead-chart .hotel-chart-note { font-size: calc(13px + 2pt); }
+@media (max-width: 700px) { .hotel-lead-chart { padding: 20px; } }

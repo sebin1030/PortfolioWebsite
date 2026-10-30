@@ -1,0 +1,10 @@
+﻿rank,feature,count,valid_denominator,percent_respondents,quality_rule,excluded_overselection_respondents,source_file
+1,개인 맞춤 운동 루틴 생성,62,99,62.6,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+2,피로·수면·시간에 따른 당일 루틴 조정,54,99,54.5,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+3,시간이 부족할 때 짧은 운동으로 자동 변경,39,99,39.4,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+4,운동 수행 기록 관리,33,99,33.3,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+5,"주간 AI 운동 리포트 (개인 맞춤 운동 루틴 수행률, ai코치의 회고 등의 내용 포함)",26,99,26.3,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+6,헬스장 운동을 홈트 등으로 대체,23,99,23.2,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+7,운동을 쉬었을 때 복귀 계획 제안,18,99,18.2,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+8,웨어러블 데이터 반영,15,99,15.2,1~3개 선택 응답만 포함,15,physical_experience_research.csv
+9,AI가 운동 계획을 변경한 이유 설명,3,99,3.0,1~3개 선택 응답만 포함,15,physical_experience_research.csv

@@ -427,7 +427,7 @@ body[data-project] .site-nav { font-size: 16px; }
   .cert-list p { font-size: calc(14px + 2pt); }
 }
 
-.page-hero > .team-projects-intro { font-size: calc(17px + 2pt); }
+.page-hero > .team-projects-intro { font-size: calc(17px + 5pt); }
 
 /* Match footer text size to the About page. */
 .projects-page .site-footer, .lab-page .site-footer, .project-page .detail-footer { font-size: calc(11px + 2pt); }
@@ -572,3 +572,5 @@ body.evidence-case[data-project="hotel"] { --motion: #6C66B2; --project: #6C66B2
 .hotel-lead-chart .case-bars { margin-bottom: 20px; }
 .evidence-case .hotel-lead-chart .hotel-chart-note { font-size: calc(13px + 2pt); }
 @media (max-width: 700px) { .hotel-lead-chart { padding: 20px; } }
+
+.lab-page .page-hero > p:last-child { font-size: calc(17px + 3pt); }

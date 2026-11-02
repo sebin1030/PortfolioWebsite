@@ -1,0 +1,8 @@
+{
+  "policy": "Only repositories explicitly approved here may appear on the Personal Projects page. Commits to an existing repository never create a new project.",
+  "repositories": [
+    "sebin1030/PM_Copilot",
+    "sebin1030/PortfolioWebsite",
+    "sebin1030/desktop_cat"
+  ]
+}
